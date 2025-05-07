@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+    <t t-inherit="point_of_sale.ProductInfoPopup" t-inherit-mode="extension">
+        <xpath expr="//ProductInfoBanner" position="after">
+          <div class="section-flower-details mt-3 mb-4 pb-4 border-bottom text-start">
+                 <h3 class="section-title">Flower Details</h3>
+                 <div class="flower-info-section container">
+                   <div class="row mb-2">
+                     <strong class="col-sm-4">Common Name:</strong>
+                     <span class="col-sm-8"><t t-esc="props.product.common_name or 'N/A'"/></span>
+                   </div>
+                   <div class="row mb-2">
+                     <strong class="col-sm-4">Scientific Name:</strong>
+                     <span class="col-sm-8"><t t-esc="props.product.scientific_name or 'N/A'"/></span>
+                   </div>
+                   <div class="row mb-2">
+                     <strong class="col-sm-4">Season Start:</strong>
+                     <span class="col-sm-8"><t t-esc="props.product.season_start or 'N/A'"/></span>
+                   </div>
+                   <div class="row mb-2">
+                     <strong class="col-sm-4">Season End:</strong>
+                     <span class="col-sm-8"><t t-esc="props.product.season_end or 'N/A'"/></span>
+                   </div>
+                   <div class="row mb-2">
+                     <strong class="col-sm-4">Watering Frequency (Days):</strong>
+                     <span class="col-sm-8"><t t-esc="props.product.watering_frequency or 'N/A'"/></span>
+                   </div>
+                   <div class="row mb-2">
+                     <strong class="col-sm-4">Watering Amount (ml):</strong>
+                     <span class="col-sm-8"><t t-esc="props.product.watering_amount or 'N/A'"/></span>
+                   </div>
+                   <div class="row mb-2">
+                     <strong class="col-sm-4">Last Watered Date: </strong>
+                     <span class="col-sm-8"><t t-esc="props.product.last_watered_date or 'N/A'"/></span>
+                   </div>
+                   </div>
+             </div>
+      </xpath>
+    </t>
+</templates>

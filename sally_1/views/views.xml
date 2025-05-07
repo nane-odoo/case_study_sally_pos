@@ -1,0 +1,11 @@
+<odoo>
+  <data>
+    <record model="ir.actions.client" id="dashboard">
+      <field name="name">Dashboard</field>
+      <field name="tag">sally_flower_shop.dashboard</field>
+    </record>
+
+    <menuitem name="Sally's Flower Shop" id="sally_flower_shop.menu_root" groups="base.group_user"/>
+    <menuitem name="Dashboard" id="sally_flower_shop.dashboard_menu" parent="sally_flower_shop.menu_root" action="sally_flower_shop.dashboard" sequence="1"/>
+  </data>
+</odoo>

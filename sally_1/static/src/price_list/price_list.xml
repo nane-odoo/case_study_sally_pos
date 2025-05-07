@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="sally_flower_shop.PriceList" owl="1">
+        <div class="d-inline-block border p-3 m-2 shadow-sm" style="min-width: 300px;">
+            <h4>Item List</h4>
+
+            <div class="input-group mb-3">
+                 <input type="text" class="form-control" placeholder="Item Name" t-ref="nameInput" />
+                 <input type="number" class="form-control" placeholder="Price" t-ref="priceInput" />
+                 <button class="btn btn-primary" type="button" t-on-click="addLine">Add</button>
+            </div>
+
+            <div class="list-group">
+                <t t-if="state.lines.length > 0">
+                    <t t-foreach="state.lines" t-as="price" t-key="price.id">
+                        <div class="list-group-item">
+                             <PriceLine
+                                priceLine="price"
+                                toggleState.bind="toggleLine"
+                                removeLine.bind="removeLine"
+                             />
+                        </div>
+                    </t>
+                </t>
+                <div t-else="" class="list-group-item text-muted">
+                    No items yet. Add one above!
+                </div>
+            </div> 
+        </div> 
+    </t> 
+</templates>

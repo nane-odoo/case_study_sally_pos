@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+      <record id="sally_addons_view_list" model="ir.ui.view">
+        <field name="name">sally_addons.view.list</field>
+        <field name="model">sally_addons.flower_addon</field>
+        <field name="arch" type="xml">
+            <list string="Flower Add-ons" editable="bottom">
+                <field name="name"/>
+                <field name="price" widget="monetary"/>
+            </list>
+        </field>
+      </record>
+
+      <record id="sally_addons_view_form" model="ir.ui.view">
+        <field name="name">sally_addons.view.form</field>
+        <field name="model">sally_addons.flower_addon</field>
+        <field name="arch" type="xml">
+            <form string="Flower Add-on">
+                  <sheet>
+                        <field name="name"/>
+                        <field name="price" widget="monetary"/>
+                    </sheet>
+              </form>
+        </field>
+      </record>
+
+      <record id="sally_addons_action" model="ir.actions.act_window">
+        <field name="name">Flower Add-ons</field>
+        <field name="res_model">sally_addons.flower_addon</field>
+        <field name="view_mode">list,form</field>
+      </record>
+
+</odoo>

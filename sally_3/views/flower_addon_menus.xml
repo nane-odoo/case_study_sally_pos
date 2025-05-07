@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <menuitem id="menu_sally_addons_flower_addon"
+          action="sally_addons_action"
+          parent="point_of_sale.menu_point_config_product"
+          groups="base.group_no_one"
+          sequence="50"/>
+</odoo>
