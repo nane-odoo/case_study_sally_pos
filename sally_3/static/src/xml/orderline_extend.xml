@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="sally_addons.OrderlineFlowerAddons" t-inherit="point_of_sale.Orderline" t-inherit-mode="extension" owl="1">
+        <xpath expr="//li[hasclass('customer-note')]" position="after">
+            <li t-if="line.flowerAddons" class="flower-addons-note w-100 p-2 mt-2 rounded text-break text-bg-info bg-opacity-25">
+                <i class="fa fa-leaf me-1" role="img" aria-label="Flower Add-ons" title="Flower Add-ons"/>
+                <strong>Add-ons:</strong> <t t-esc="line.flowerAddons" />
+            </li>
+        </xpath>
+
+        </t>
+
+</templates>

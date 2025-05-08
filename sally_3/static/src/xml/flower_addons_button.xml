@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+
+    <t t-name="sally_addons.FlowerAddonsButton">
+        <button
+            class="btn btn-light btn-lg lh-lg flex-shrink-0"
+            t-att-disabled="!pos.get_order()?.get_selected_orderline()" 
+            t-on-click="onClick">
+            <span>Add Ons</span>
+        </button>
+    </t>
+</templates>
