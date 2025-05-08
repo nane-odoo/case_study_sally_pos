@@ -28,7 +28,7 @@ patch(PaymentScreen.prototype, {
 
         for (const line of orderlines) {
             const product = line.get_product();
-            if (product && product.last_watered_date) {
+            if (product?.last_watered_date) {
                 const lastWateredUTCString = product.last_watered_date;
                 const lastWateredUTC = new Date(
                     lastWateredUTCString.endsWith("Z")

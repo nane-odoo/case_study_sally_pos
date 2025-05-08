@@ -1,6 +1,7 @@
 from odoo import _, api, fields, models
 from odoo.osv import expression
 
+
 class PosConfig(models.Model):
     _inherit = 'pos.config'
 
@@ -10,4 +11,3 @@ class PosConfig(models.Model):
         final_domain = expression.AND([original_domain, flower_filter])
 
         return final_domain
-        

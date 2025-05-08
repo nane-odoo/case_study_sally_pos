@@ -7,33 +7,33 @@
                  <div class="flower-info-section container">
                    <div class="row mb-2">
                      <strong class="col-sm-4">Common Name:</strong>
-                     <span class="col-sm-8"><t t-esc="props.product.common_name or 'N/A'"/></span>
+                     <span class="col-sm-8" t-esc="props.product.common_name or 'N/A'"/>
                    </div>
                    <div class="row mb-2">
                      <strong class="col-sm-4">Scientific Name:</strong>
-                     <span class="col-sm-8"><t t-esc="props.product.scientific_name or 'N/A'"/></span>
+                     <span class="col-sm-8" t-esc="props.product.scientific_name or 'N/A'"/>
                    </div>
                    <div class="row mb-2">
                      <strong class="col-sm-4">Season Start:</strong>
-                     <span class="col-sm-8"><t t-esc="props.product.season_start or 'N/A'"/></span>
+                     <span class="col-sm-8" t-esc="props.product.season_start or 'N/A'"/>
                    </div>
                    <div class="row mb-2">
                      <strong class="col-sm-4">Season End:</strong>
-                     <span class="col-sm-8"><t t-esc="props.product.season_end or 'N/A'"/></span>
+                     <span class="col-sm-8" t-esc="props.product.season_end or 'N/A'"/>
                    </div>
                    <div class="row mb-2">
                      <strong class="col-sm-4">Watering Frequency (Days):</strong>
-                     <span class="col-sm-8"><t t-esc="props.product.watering_frequency or 'N/A'"/></span>
+                     <span class="col-sm-8" t-esc="props.product.watering_frequency or 'N/A'"/>
                    </div>
                    <div class="row mb-2">
                      <strong class="col-sm-4">Watering Amount (ml):</strong>
-                     <span class="col-sm-8"><t t-esc="props.product.watering_amount or 'N/A'"/></span>
+                     <span class="col-sm-8" t-esc="props.product.watering_amount or 'N/A'"/>
                    </div>
                    <div class="row mb-2">
                      <strong class="col-sm-4">Last Watered Date: </strong>
-                     <span class="col-sm-8"><t t-esc="props.product.last_watered_date or 'N/A'"/></span>
+                     <span class="col-sm-8" t-esc="props.product.last_watered_date or 'N/A'"/>
                    </div>
-                   </div>
+                 </div>
              </div>
       </xpath>
     </t>

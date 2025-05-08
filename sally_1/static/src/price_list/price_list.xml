@@ -25,7 +25,7 @@
                 <div t-else="" class="list-group-item text-muted">
                     No items yet. Add one above!
                 </div>
-            </div> 
-        </div> 
-    </t> 
+            </div>
+        </div>
+    </t>
 </templates>

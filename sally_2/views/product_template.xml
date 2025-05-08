@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <record id="product_template_form_view_inherit_flower" model="ir.ui.view">
-        <field name="name">product.template.form.inherit.flower</field>
+    <record id="product_template_form_view_inherit_sally_2" model="ir.ui.view">
+        <field name="name">product.template.form.inherit.sally_2</field>
         <field name="model">product.template</field>
         <field name="inherit_id" ref="product.product_template_form_view"/>
         <field name="arch" type="xml">
@@ -11,7 +11,7 @@
                     <label for="is_flower" string="Is Flower ?" />
             </xpath>
 
-            <xpath expr="//notebook" position="inside">
+            <notebook position="inside">
                 <page string="Flower Details" name="flower_details" invisible="not is_flower">
                     <group name="flower_info_group">
                         <group string="Identification">
@@ -26,8 +26,8 @@
                             <field name="last_watered_date"/>
                             </group>
                     </group>
-                    </page>
-            </xpath>
+                </page>
+            </notebook>
 
         </field>
     </record>

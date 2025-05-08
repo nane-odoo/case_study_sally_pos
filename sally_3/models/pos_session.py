@@ -7,6 +7,4 @@ class PosSession(models.Model):
 
     @api.model
     def _load_pos_data_models(self, config_id):
-        res = super()._load_pos_data_models(config_id)
-        res.append("sally_addons.flower_addon")
-        return res
+        return super()._load_pos_data_models(config_id) + ["sally_addons.flower_addon"]

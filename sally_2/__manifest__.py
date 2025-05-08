@@ -15,7 +15,4 @@
             "sally_2/static/src/xml/pos_product_info_popup_inherit.xml"
         ]
     },
-    "installable": True,
-    "auto_install": True,
-    "application": False,
 }

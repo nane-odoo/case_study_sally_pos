@@ -5,7 +5,8 @@
       <field name="tag">sally_flower_shop.dashboard</field>
     </record>
 
-    <menuitem name="Sally's Flower Shop" id="sally_flower_shop.menu_root" groups="base.group_user"/>
-    <menuitem name="Dashboard" id="sally_flower_shop.dashboard_menu" parent="sally_flower_shop.menu_root" action="sally_flower_shop.dashboard" sequence="1"/>
+    <menuitem name="Sally's Flower Shop" id="sally_flower_shop.menu_root" groups="base.group_user">
+      <menuitem name="Dashboard" id="sally_flower_shop.dashboard_menu" action="sally_flower_shop.dashboard" sequence="1"/>
+    </menuitem>
   </data>
 </odoo>

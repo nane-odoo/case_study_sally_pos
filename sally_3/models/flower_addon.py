@@ -1,6 +1,5 @@
-# -*- coding: utf-8 -*-
+from odoo import _, api, fields, models
 
-from odoo import models, fields, api
 
 class FlowerAddon(models.Model):
     """
@@ -11,7 +10,7 @@ class FlowerAddon(models.Model):
 
     name = fields.Char(string="Add-On Name", required=True)
     price = fields.Float(string="Price", required=True)
-    
+
     _sql_constraints = [
         ("unique_name", "UNIQUE(name)", "An addon with this name already exists!"),
         ("valid_price", "CHECK(price >= 0)", "The given price must be positive!")
@@ -29,4 +28,3 @@ class FlowerAddon(models.Model):
     @api.model
     def _load_pos_data_fields(self):
         return ['name', 'price']
-    

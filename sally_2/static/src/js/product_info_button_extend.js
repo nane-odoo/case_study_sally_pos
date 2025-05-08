@@ -66,31 +66,6 @@ patch(ProductInfoButton.prototype, {
                     "Could not load custom product details. Please check the connection or backend configuration."
                 ),
             });
-            // Optional: Decide if you want to show the popup with only standard info on error
-            // info.flowerData = {}; // Ensure flowerData exists but is empty
-            // this.dialog.add(ProductInfoPopup, { info: info, product: product });
         }
     },
-});
-
-/*
- * Patch the standard ProductInfoPopup component:
- * - Ensure it correctly receives and stores the 'flowerData' from the props.
- * - This makes 'this.flowerData' available for use in the XML template.
- */
-patch(ProductInfoPopup.prototype, {
-    setup() {
-        // Inherit original setup
-        super.setup(...arguments);
-        // Store the flower data passed in props.info into a component property
-        // Default to an empty object if it's not provided for some reason
-        this.flowerData = this.props.info?.flowerData ?? {};
-        // Log for debugging purposes (visible in browser console)
-        console.log(
-            "ProductInfoPopup Patched Setup - Received flowerData:",
-            this.flowerData
-        );
-    },
-    // No need to patch other methods like _hasMarginsCostsAccessRights unless
-    // your custom display depends on them.
 });

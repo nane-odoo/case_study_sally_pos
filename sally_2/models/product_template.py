@@ -1,15 +1,16 @@
 from odoo import _, api, fields, models
 from odoo.exceptions import ValidationError
 
+
 class ProductTemplate(models.Model):
     _inherit = 'product.template'
 
     is_flower = fields.Boolean()
 
-    common_name = fields.Char(string='Common Name', required=True)
-    scientific_name = fields.Char(string='Scientific Name', )
-    season_start = fields.Date(string='Season Start', )
-    season_end = fields.Date(string='Season End', )
+    common_name = fields.Char(required=True)
+    scientific_name = fields.Char()
+    season_start = fields.Date()
+    season_end = fields.Date()
 
     watering_frequency = fields.Integer(string='Water Frequency (Days)')
     watering_amount = fields.Float(string='Watering Amount in (ml)', )
@@ -26,15 +27,14 @@ class ProductTemplate(models.Model):
         product = self.browse(product_id)
         if not product:
             return None
-        else:
-            return {
-                'id': product.id, 
-                'name': product.display_name,
-                'common_name': product.common_name,
-                'scientific_name': product.scientific_name,
-                'season_start': product.season_start,
-                'season_end': product.season_end,
-                'watering_frequency': product.watering_frequency,
-                'watering_amount': product.watering_amount,
-                'last_watered_date': product.last_watered_date
-            }
+        return {
+            'id': product.id,
+            'name': product.display_name,
+            'common_name': product.common_name,
+            'scientific_name': product.scientific_name,
+            'season_start': product.season_start,
+            'season_end': product.season_end,
+            'watering_frequency': product.watering_frequency,
+            'watering_amount': product.watering_amount,
+            'last_watered_date': product.last_watered_date
+        }

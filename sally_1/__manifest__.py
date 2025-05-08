@@ -1,11 +1,10 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "Sally Flower Shop List",
-    'author': "Odoo",
+    'name': "PSAE Sally Flower Shop List",
+    'author': "Odoo PS",
     'website': "https://www.odoo.com/",
-    'version': '0.1',
+    'version': '18.0.1.0.0',
     'application': True,
-    'installable': True,
     'depends': ['web'],
 
     'data': [
@@ -16,5 +15,5 @@
             'sally_1/static/src/**/*',
         ],
     },
-    'license': 'AGPL-3'
+    'license': 'OEEL-1'
 }

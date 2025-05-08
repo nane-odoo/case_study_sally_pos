@@ -29,18 +29,16 @@ patch(PosOrderline.prototype, {
     },
 });
 
-patch(Orderline, {
-    props: {
-        ...Orderline.props,
-        line: {
-            ...Orderline.props.line,
-            shape: {
-                ...Orderline.props.line.shape,
-                flowerAddons: {
-                    type: String,
-                    optional: true,
-                },
+Orderline.props = {
+    ...Orderline.props,
+    line: {
+        ...Orderline.props.line,
+        shape: {
+            ...Orderline.props.line.shape,
+            flowerAddons: {
+                type: String,
+                optional: true,
             },
         },
     },
-});
+};
